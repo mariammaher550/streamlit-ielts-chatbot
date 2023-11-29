@@ -116,10 +116,13 @@ def main():
     # Dropdown for selecting the model
     model_options = ["gpt-3.5-turbo", "davinci-002", "fine-tuned davinci-002","fine-tuned gpt3.5"]
     selected_model = st.selectbox("Select Model:", model_options)
-    if selected_model == "fine-tuned gpt3.5":
-        selected_model = finetuned_gpt_key
+    if selected_model == "gpt-3.5-turbo":
+        selected_model == finetuned_gpt_key
+        
+    elif selected_model == "fine-tuned gpt3.5":
+        selected_model = "gpt-3.5-turbo"
 
-    if selected_model == "fine-tuned davinci-002":
+    elif selected_model == "davinci-002":
         selected_model = finetuned_dv02
 
     # Button to generate the answer
